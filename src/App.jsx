@@ -20,9 +20,6 @@ function App() {
         <Route path='/Dine&Drinks' element={<DineDirinks/>} />
         <Route path='/Gallery' element={<Gallery/>} />
         <Route path='/Contact-us' element={<Contact/>} />
-
-
-        
       </Routes>
     </>
   );
