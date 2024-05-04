@@ -21,7 +21,7 @@ function Carousel() {
   };
 
   useEffect(() => {
-    const interval = setInterval(goToNextSlide, 5000); 
+    const interval = setInterval(goToNextSlide, 13000); 
     return () => clearInterval(interval);
   }, [currentSlide]);
 
@@ -33,7 +33,7 @@ function Carousel() {
       </div>
       <button onClick={goToPreviousSlide}>{"<"}</button>
       <div className="slide">
-        <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} />
+        <img src={slides[currentSlide]} alt='slider-img' />
       </div>
       <button onClick={goToNextSlide}> {">"} </button>
     </div>
