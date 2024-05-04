@@ -1,11 +1,11 @@
 import React from 'react'
 
-function RoomsComp() {
+function ExecutiveRoom() {
   return (
     <div>
-      Rooms&hall
+      
     </div>
   )
 }
 
-export default RoomsComp
+export default ExecutiveRoom

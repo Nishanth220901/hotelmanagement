@@ -35,7 +35,7 @@ function Navbar() {
             <NavLink to="/Hall" onClick={toggleMenu}>Hall</NavLink>
           </li>
           <li>
-            <NavLink to="/Service" onClick={toggleMenu}>Dine & Drinks</NavLink>
+            <NavLink to="/Dine&Drinks" onClick={toggleMenu}>Dine & Drinks</NavLink>
           </li>
           <li>
             <NavLink to="/Gallery" onClick={toggleMenu}>Gallery</NavLink>
