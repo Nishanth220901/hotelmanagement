@@ -24,13 +24,13 @@ export default function Booking() {
     phone: '',
     address: '',
     roomNumber: null,
-    roomPrice: roomRates[''],
+    roomPrice: roomRates['Executive-ac'],
     totalPrice: 0
   });
 
   useEffect(() => {
     if (currentStage === 3) {
-      const roomNumber = Math.floor(Math.random() * 15) + 1
+      const roomNumber = Math.floor(Math.random() * 15) + 1;
       setFormData({ ...formData, roomNumber: roomNumber });
     }
   }, [currentStage]);
@@ -70,6 +70,7 @@ export default function Booking() {
       })
         .then(res => {
           console.log(res);
+          setFormData({ ...formData, id: res.data.id });
           setCurrentStage(currentStage + 1);
         })
         .catch(err => {
@@ -81,14 +82,20 @@ export default function Booking() {
   };
 
   const calculateTotalCost = () => {
-    if (formData.nights === '0') {
-      return formData.roomPrice;
+    const { nights, roomPrice, persons } = formData;
+
+    const parsedNights = Number(nights);
+    const parsedRoomPrice = Number(roomPrice);
+    const parsedPersons = Number(persons);
+
+    if (isNaN(parsedNights) || isNaN(parsedRoomPrice) || isNaN(parsedPersons)) {
+      return 0; 
     }
 
-    let totalCost = formData.nights * formData.roomPrice;
+    let totalCost = parsedNights * parsedRoomPrice;
 
-    if (formData.persons > 2) {
-      totalCost += (formData.persons - 2) * 1000;
+    if (parsedPersons > 2) {
+      totalCost += (parsedPersons - 2) * 1000;
     }
 
     return totalCost;
@@ -146,7 +153,7 @@ export default function Booking() {
                 onChange={handleFormChange}
                 required
               />
-              <button className="btn btn-success"  type="submit">Check</button>
+              <button className="btn btn-success" type="submit">Check</button>
             </form>
           </div>
         );
@@ -222,6 +229,8 @@ export default function Booking() {
         return (
           <div className="booking-details-container">
             <h1>Booking Details</h1>
+
+            <p>Booking Id: {formData.id}</p>
             <p>Name: {formData.name}</p>
             <p>Email: {formData.email}</p>
             <p>Phone: {formData.phone}</p>

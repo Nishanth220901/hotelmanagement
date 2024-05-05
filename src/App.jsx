@@ -12,6 +12,8 @@ import Login from './Components/Auth/Login';
 import Signup from './Components/Auth/Signup';
 import Auth from './Components/Auth/Auth';
 import Booking from './Components/Booking/Booking';
+import BookingPage from './Components/Booking/BookingPage';
+import NoMatch from './Components/Nomatch/NoMatch';
 
 
 function App() {
@@ -28,7 +30,9 @@ function App() {
         <Route path='/Contact-us' element={<Contact/>} />
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/bookingorders' element={<BookingPage/>}/>
         <Route path='/bookingpage' element={<RequriedAuth><Booking/></RequriedAuth>}/>
+        <Route path='*' element={<NoMatch/>}/>
       </Routes>
       </Auth>
     </>
