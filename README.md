@@ -11,3 +11,6 @@ Currently, two official plugins are available:
 * For Testimonials
 
 installed  - npm install react-slick slick-carousel
+
+
+install - npm i react-toastify

@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": "123",
+      "name": "John",
+      "email": "jhon@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "056d",
+      "name": "jaikrishnavr",
+      "email": "jk@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "c6f5",
+      "name": "",
+      "email": "",
+      "password": ""
+    }
+  ],
+  "Rooms": [
+    {
+      "id": "1",
+      "roomtype": "delex",
+      "from": "02-02-1998",
+      "to": "01-03-1998",
+      "days": "10",
+      "person": "2",
+      "roomprice": "1000",
+      "name": "jaikrishnavr",
+      "email": "jk@gmail.com",
+      "address": "123@kgisl"
+    },
+    {
+      "id": "4e4e",
+      "roomType": "Deluxe",
+      "roomNumber": 3,
+      "roomStatus": "Available",
+      "roomGuestName": "dsd",
+      "roomGuestEmail": "sdsd@dsd0.sds",
+      "roomGuestPhone": "1515151",
+      "roomCapacity": "1",
+      "roomNights": "1",
+      "roomCheckIn": "2024-05-07",
+      "roomCheckOut": "2024-05-09",
+      "roomPrice": 5000
+    }
+  ]
+}

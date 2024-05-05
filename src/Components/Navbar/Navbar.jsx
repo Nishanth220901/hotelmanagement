@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
@@ -46,14 +46,12 @@ function Navbar() {
           
         <li>
 
-        <button className="btn1">Book Now</button>
+       <Link to='/bookingpage'> <button className="btn1">Book Now</button></Link>
         </li>
-    
-          
         </ul>
       </div>
       <div className="navbar-right">
-        <button className="btn2">Book Now</button>
+      <Link to='/bookingpage'><button className="btn2">Book Now</button></Link>
       </div>
     </nav>
   );
