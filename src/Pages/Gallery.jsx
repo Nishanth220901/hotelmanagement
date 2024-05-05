@@ -8,6 +8,7 @@ import room4 from '../assets/Room4.jpg'
 import hall from '../assets/Hall1.jpg'
 import restaurant from '../assets/Restaurant.jpg'
 import './Gallery.css'; 
+import Footer from '../Components/Footer/Footer';
 
 function Gallery() {
   const [selectedField, setSelectedField] = useState('Rooms');
@@ -51,6 +52,7 @@ function Gallery() {
           ))}
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

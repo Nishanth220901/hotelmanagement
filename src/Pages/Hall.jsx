@@ -4,7 +4,7 @@ import Navbar from '../Components/Navbar/Navbar'
 function Hall() {
   return (
     <div>
-      <Navbar/>
+      <Navbar/>   
     </div>
   )
 }

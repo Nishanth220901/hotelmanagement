@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
+import { useAuth } from '../Auth/Auth';
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
 
+  const auth = useAuth()
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
@@ -12,7 +14,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-      <h5>H-Residency</h5>
+        <h5>H-Residency</h5>
         {/* <img src="logo.png" alt="Logo" className="logo" /> */}
       </div>
       <div className="navbar-center">
@@ -31,27 +33,30 @@ function Navbar() {
           <li>
             <NavLink to="/Rooms" onClick={toggleMenu}>Rooms</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/Hall" onClick={toggleMenu}>Hall</NavLink>
           </li>
           <li>
             <NavLink to="/Dine&Drinks" onClick={toggleMenu}>Dine & Drinks</NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink to="/Gallery" onClick={toggleMenu}>Gallery</NavLink>
           </li>
           <li>
             <NavLink to="/Contact-us" onClick={toggleMenu}>Contact us</NavLink>
           </li>
-          
-        <li>
 
-       <Link to='/bookingpage'> <button className="btn1">Book Now</button></Link>
-        </li>
+          {auth.user && <li> <NavLink to="/bookingorders" onClick={toggleMenu}>Bookings</NavLink></li>}
+
+          <li>
+            <Link to='/bookingpage'> <button className="btn1">Book Now</button></Link>
+          </li>
+
+          
         </ul>
       </div>
       <div className="navbar-right">
-      <Link to='/bookingpage'><button className="btn2">Book Now</button></Link>
+        <Link to='/bookingpage'><button className="btn2">Book Now</button></Link>
       </div>
     </nav>
   );
