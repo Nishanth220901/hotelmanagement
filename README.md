@@ -17,9 +17,10 @@ install - npm i react-toastify
 
 
 * To start json-server
-npm run server
+
+- npm run server
 
 
 * To start the project
 
-npm run dev
+- npm run dev
