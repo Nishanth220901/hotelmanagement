@@ -6,7 +6,7 @@ import './HotelServices.css';
 
 function HotelServices() {
   return (
-    <div className="container-fluid" style={{backgroundColor:"#000000", color:'while'}}>
+    <div className="container-fluid" style={{backgroundColor:"#000000", color:'while'}} >
       <div className='Services row p-5 text-light'>
         <div className='col-md-6'>
           <h4 className='t1'>LUXURY HOTEL</h4>
@@ -17,7 +17,7 @@ function HotelServices() {
         <div className='col-md-6'>
           <div className='row p-5'>
             <div className='col-sm-6'>
-              <Card style={{ width: '100%' }}>
+              <Card style={{ width: '100%' }}  className='m-2'>
                 <Card.Img variant="top" src="https://static.wixstatic.com/media/6c1643_a42fa6ded8514ba298ee940c9e1186a3~mv2.jpg/v1/fill/w_281,h_160,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/1%20(2).jpg" style={{height: '160px'}} />
                 <Card.Body>
                   <Card.Title>ROOM CLEANING</Card.Title>
@@ -26,7 +26,7 @@ function HotelServices() {
             </div>
 
             <div className='col-sm-6'>
-              <Card style={{ width: '100%' }}>
+              <Card style={{ width: '100%' }} className='m-2'>
                 <Card.Img variant="top" src={flight} style={{height: '160px'}} />
                 <Card.Body>
                   <Card.Title>Airport Pick Up & Drop</Card.Title>
