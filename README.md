@@ -12,8 +12,9 @@ Currently, two official plugins are available:
 
 installed  - npm install react-slick slick-carousel
 
-
+# For toast message
 install - npm i react-toastify
+
 
 # To start json-server
 
