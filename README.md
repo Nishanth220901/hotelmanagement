@@ -14,3 +14,12 @@ installed  - npm install react-slick slick-carousel
 
 
 install - npm i react-toastify
+
+
+* To start json-server
+npm run server
+
+
+* To start the project
+
+npm run dev
