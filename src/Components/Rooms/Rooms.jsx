@@ -23,7 +23,7 @@ export default function Rooms() {
             style={{ width: "100%", height: "400px" }} />
           <Card.Body>
             <Card.Title>Executive Room</Card.Title><br></br>
-            <Link to="/bookingspage">
+            <Link to="/bookingpage">
               <button className="custom-button">Book now</button>
             </Link>
           </Card.Body>
@@ -33,8 +33,9 @@ export default function Rooms() {
           <Card.Img variant="top" src={i2} style={{ width: "100%", height: "400px" }} />
           <Card.Body>
             <Card.Title>Executive premier Room</Card.Title><br></br>
-
-            <button className="custom-button">Know More</button>
+            <Link to="/bookingpage">
+              <button className="custom-button">Book now</button>
+            </Link>
           </Card.Body>
       
         </Card>
@@ -42,8 +43,9 @@ export default function Rooms() {
           <Card.Img variant="top" src={i4} style={{ width: "100%", height: "400px" }} />
           <Card.Body>
             <Card.Title>Deluxe Room</Card.Title><br></br>
-
-            <button className="custom-button">Know More</button>
+            <Link to="/bookingpage">
+              <button className="custom-button">Book now</button>
+            </Link>
           </Card.Body>
           
         </Card>
@@ -51,8 +53,9 @@ export default function Rooms() {
           <Card.Img variant="top" src={i3}  style={{ width: "100%", height: "400px" }} />
           <Card.Body>
             <Card.Title>Premium Room</Card.Title><br></br>
-
-            <button className="custom-button">Know More</button>
+            <Link to="/bookingpage">
+              <button className="custom-button">Book now</button>
+            </Link>
           </Card.Body>
         
         </Card>
